@@ -37,8 +37,7 @@ body {
     padding: 50px 50px 50px 0;
     border-radius: 20px;
     width: 800px;
-    height: 100%;
-    max-height: 430px;
+    height: auto;
     display: flex;
 }
 
@@ -70,8 +69,14 @@ body {
     display: none;
 }
 
+.card .card-accordion-comp.show .card-accordion-body {
+    display: block;
+}
+
+
 .card .card-accordion-comp {
     border-bottom: 1px solid var(--n-dark-blue);
+    padding: 20px 0;
 }
 
 .card .card-accordion-head a {
@@ -79,11 +84,17 @@ body {
     width: 100%;
     background: url('./images/icon-arrow-down.svg') right no-repeat;
     background-size: 15px;
-    padding: 20px 0;
     font-size: 14px;
     font-weight: 400;
     color: var(--v-dark-blue);
     text-decoration: none;
+}
+
+.card .card-accordion-body p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--n-dark-blue);
 }
 
 .attribution { 
