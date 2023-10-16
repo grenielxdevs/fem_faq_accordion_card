@@ -8,33 +8,74 @@
   
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- Main Style: styles.css -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Fonts: Kumbh Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
-
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
-
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
-
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
-
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
-
-  <div class="attribution">
+  <main>
+    <div class="container">
+      <div class="card">
+        <div class="card-image">
+          <img src="./images/illustration-woman-online-desktop.svg" alt="">
+        </div>
+        <div class="card-content">
+          <h2>FAQ</h2>
+          <div class="card-accordion-container">
+            <div class="card-accordion-comp">
+              <div class="card-accordion-head">
+                <a class="card-accordion-link">How many team members can I invite?</a>
+              </div>
+              <div class="card-accordion-body">
+                <p>You can invite up to 2 additional users on the Free plan. There is no limit on 
+                  team members for the Premium plan.</p>
+              </div>
+            </div>
+            <div class="card-accordion-comp">
+              <div class="card-accordion-head">
+                <a class="card-accordion-link">What is the maximum file upload size?</a>
+              </div>
+              <div class="card-accordion-body">
+                <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+              </div>
+            </div>
+            <div class="card-accordion-comp">
+              <div class="card-accordion-head">
+                <a class="card-accordion-link">How do I reset my password?</a>
+              </div>
+              <div class="card-accordion-body">
+                <p>Click “Forgot password” from the login page or “Change password” from your profile page.
+                  A reset link will be emailed to you.</p>
+              </div>
+            </div>
+            <div class="card-accordion-comp">
+              <div class="card-accordion-head">
+                <a class="card-accordion-link">Can I cancel my subscription?</a>
+              </div>
+              <div class="card-accordion-body">
+                <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
+              </div>
+            </div>
+            <div class="card-accordion-comp">
+              <div class="card-accordion-head">
+                <a class="card-accordion-link">Do you provide additional support?</a>
+              </div>
+              <div class="card-accordion-body">
+                <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </footer>
 </body>
 </html>
