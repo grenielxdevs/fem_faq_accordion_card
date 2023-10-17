@@ -128,6 +128,11 @@ body {
     text-decoration: none;
 }
 
+.card .card-accordion-comp.show a {
+    font-weight: 700;
+    background: url('./images/angle-up-solid.svg') right no-repeat;
+}
+
 .card .card-accordion-body p {
     padding-right: 10px;
     margin: 10px 0 0;
@@ -165,10 +170,6 @@ body {
 
     .card .card-accordion-head a {
         padding-right: 10%;
-    }
-
-    .card .card-accordion-comp.show a {
-        background: url('./images/angle-up-solid.svg') right no-repeat;
     }
 }
 
