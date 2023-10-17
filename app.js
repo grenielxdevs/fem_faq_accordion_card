@@ -1,17 +1,22 @@
 const accordLinks = document.querySelectorAll('.card-accordion-link');
 
-let activeIndex;
-let target;
+let activeIndex = -1;
 for(let i = 0; i < accordLinks.length; i++) {
-    accordLinks[i].parentNode.parentNode.setAttribute('id', `${i}`);
     accordLinks[i].addEventListener('click', function(e) {
-        target = e.target.parentNode.parentNode;
-        activeIndex = i;
-        console.log(target)
+        parentElement = e.target.parentNode.parentNode;
+
+        if(activeIndex != -1) {
+            accordLinks[activeIndex].parentNode.parentNode.classList.remove('show')
+        }
+
+        if(activeIndex !== i) {
+            parentElement.classList.add('show');
+            activeIndex = i;
+        } else {
+            parentElement.classList.remove('show');
+            activeIndex = -1;
+        }
+
+
     })
-
-}
-
-if(target) {
-    target.classList.add('show');
 }

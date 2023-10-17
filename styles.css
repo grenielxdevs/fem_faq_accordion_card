@@ -28,35 +28,73 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 50px;
+}
+
+.sp {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .sp {
+        display: block;
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .container {
+        height: auto;
+        align-items: flex-start;
+        padding: 30% 20px 40px;
+    }
 }
 
 /* Card Styles */
 .card {
+    position: relative;
     background-color: var(--l-blue);
-    padding: 50px 50px 50px 0;
+    padding: 0;
     border-radius: 20px;
     width: 800px;
     height: auto;
     display: flex;
 }
 
+.card:before {
+    content: "";
+    position: absolute;
+    background: url(./images/illustration-box-desktop.svg) no-repeat;
+    background-size: 100%;
+    width: 20%;
+    height: 135px;
+    left: -9.7%;
+    top: 42%;
+    z-index: 1;
+}
+
 .card .card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    width: 50%;
+    width: 45%;
     overflow: hidden;
+    background: url(./images/bg-pattern-desktop.svg) center left 114% no-repeat;
+    background-size: 146%;
 }
 
 .card .card-image img {
-    max-width: 115%;
+    max-width: 110%;
     position: relative;
     width: 1000px;
-    left: -65px;
+    left: -40px;
 }
 
 .card .card-content {
-    width: 50%;
-    padding: 0 30px;
+    width: 55%;
+    padding: 50px 70px 50px 50px;
 }
 
 .card .card-content h2 {
@@ -82,7 +120,7 @@ body {
 .card .card-accordion-head a {
     display: block;
     width: 100%;
-    background: url('./images/icon-arrow-down.svg') right no-repeat;
+    background: url('./images/angle-down-solid.svg') right no-repeat;
     background-size: 15px;
     font-size: 14px;
     font-weight: 400;
@@ -91,12 +129,51 @@ body {
 }
 
 .card .card-accordion-body p {
+    padding-right: 10px;
     margin: 10px 0 0;
     font-size: 14px;
     font-weight: 400;
     color: var(--n-dark-blue);
 }
 
+@media screen and (max-width: 768px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .card:before {
+        display: none;
+    }
+
+    .card .card-content {
+        width: 100%;
+        padding: 40px;
+    }
+
+    .card .card-image {
+        overflow: unset;
+        width: 100%;
+        background: url('./images/bg-pattern-mobile.svg') top left 50% no-repeat;
+        background-size: 60%;
+    }
+
+    .card .card-image img {
+        margin: -27% 0 10%;
+        left: 0%;
+        max-width: 60%;
+    }
+
+    .card .card-accordion-head a {
+        padding-right: 10%;
+    }
+
+    .card .card-accordion-comp.show a {
+        background: url('./images/angle-up-solid.svg') right no-repeat;
+    }
+}
+
+
+/* Footer Styles */
 .attribution { 
     font-size: 11px; 
     text-align: center; 
