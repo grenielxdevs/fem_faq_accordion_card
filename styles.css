@@ -126,6 +126,11 @@ body {
     font-weight: 400;
     color: var(--v-dark-blue);
     text-decoration: none;
+    cursor: pointer;
+}
+
+.card .card-accordion-head a:hover { 
+    color: var(--soft-red);
 }
 
 .card .card-accordion-comp.show a {
