@@ -177,9 +177,10 @@ body {
 /* Footer Styles */
 .attribution { 
     font-size: 11px; 
-    text-align: center; 
+    text-align: center;
+    padding: 10px;
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--l-blue); 
 }
